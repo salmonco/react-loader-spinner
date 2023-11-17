@@ -1,27 +1,45 @@
-# React + TypeScript + Vite
+# react-loader-spinner
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+You can display the loading status visually through the loader.
 
-Currently, two official plugins are available:
+## Screenshot
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![fade0](https://github.com/salmonco/react-loader-spinner/assets/86469788/2d6a78ff-c3d8-4b72-b650-03ff973a9d6b)
+![fade1](https://github.com/salmonco/react-loader-spinner/assets/86469788/db600b8e-47de-46b0-8c98-458c83bb286b)
+![fade2](https://github.com/salmonco/react-loader-spinner/assets/86469788/71e12111-3909-483c-bb64-87a07581cac4)
 
-## Expanding the ESLint configuration
+You can resize the loader using margin.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Installation
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+```
+npm install @salmonco/react-loader-spinner
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Usage
+
+```typescript
+import { FadeLoader } from '@salmonco/react-loader-spinner';
+
+<FadeLoader color="green" width={3} height={10} margin={8} />;
+```
+
+## Props
+
+|Prop|Description|Type|Default|
+|---|---|---|---|
+|color|Color of the loader|string|salmon|
+|width|Width of elements that make up the loader|number|5|
+|height|Height of elements that make up the loader|number|15|
+|radius|Border radius of elements that make up the loader|number|2|
+|margin|Distance of elements from the center of the loader|number|10|
+
+If you write it as a number, it will automatically be treated as px.
+
+## Contributing
+
+Contributions are always welcome!
+
+## License
+
+MIT
